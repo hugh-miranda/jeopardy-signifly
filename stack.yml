@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  app:
+    image: registry.signifly.io/jeopardy/app:develop
+    networks:
+      - traefik-net
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '1'
+          memory: 200M
+        reservations:
+          cpus: '0.01'
+          memory: 100M
+      update_config:
+        order: start-first
+      placement:
+        constraints:
+          - node.labels.type == app
+      restart_policy:
+        condition: on-failure
+      labels:
+        traefik.port: 3000
+        traefik.enable: 'true'
+        traefik.frontend.rule: Host:jeopardy.signifly.io
+        traefik.frontend.auth.basic.users: signifly:$$apr1$$T4GeRRJs$$5QLbct8tfuNWIpMjKSOdg.
+
+networks:
+  traefik-net:
+    external: true
