@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   app:
-    image: registry.signifly.io/jeopardy-signifly/app:develop
+    image: registry.signifly.io/jeopardy/app:develop
     networks:
       - traefik-net
     deploy:
