@@ -24,7 +24,7 @@ services:
       labels:
         traefik.port: 3000
         traefik.enable: 'true'
-        traefik.frontend.rule: Host:jeopardy.signifly.io
+        traefik.frontend.rule: Host:jeopardy-signifly.signifly.io
         traefik.frontend.auth.basic.users: signifly:$$apr1$$T4GeRRJs$$5QLbct8tfuNWIpMjKSOdg.
 
 networks:
