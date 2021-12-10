@@ -81,7 +81,7 @@ export default {
           {
             cost: 300,
             question: 'What?',
-            answer: 'This'
+            answer: 'This is'
           },
           {
             cost: 400,
