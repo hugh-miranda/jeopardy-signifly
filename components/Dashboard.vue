@@ -40,28 +40,28 @@ export default {
         items: [
           {
             cost: 100,
-            question: 'What?',
-            answer: 'This'
+            question: 'What year did Signifly set up shop in Denmark?',
+            answer: '2010'
           },
           {
             cost: 200,
-            question: 'What is our office address?',
-            answer: ''
+            question: 'What is our current office address?',
+            answer: '1275 Av. des Canadiens-de-Montréal, Montreal, QC'
           },
           {
             cost: 300,
-            question: 'What',
-            answer: 'This'
+            question: 'According to its website, how many awards has Signifly won for both design and development?',
+            answer: '25'
           },
           {
             cost: 400,
-            question: 'How much does a chicken poutine costs at Campo (before tax)?',
+            question: 'Campo became the go-to restaurant for the office. How much does a chicken poutine costs there (before tax)?',
             answer: '$14.49'
           },
           {
             cost: 500,
-            question: 'What?',
-            answer: 'This'
+            question: `What did Signifly Montreal's Managing Director studied at Copenhagen Business School?`,
+            answer: 'Master’s degree in Management of Innovation and Business Development'
           }
         ]
       },
@@ -70,118 +70,121 @@ export default {
         items: [
           {
             cost: 100,
+            question: `What was the smokiest costume on Halloween?`,
+            answer: `Mahendra's Shisha`
+          },
+          {
+            cost: 200,
+            question: 'Our boy Ziad made us proud by bringing home a medal from Copenhagen. What discipline was he competing in?',
+            answer: 'Drinking 10 beers'
+          },
+          {
+            cost: 300,
             question: 'What was the name of the team trip climbing trail?',
             answer: 'Via Ferrata'
           },
           {
-            cost: 200,
-            question: 'What?',
-            answer: 'This'
-          },
-          {
-            cost: 300,
-            question: 'What?',
-            answer: 'This is'
-          },
-          {
             cost: 400,
-            question: 'What?',
-            answer: 'This'
+            question: 'What is the name of the statutory holiday elevated this year, also known as Orange Shirt Day?',
+            answer: 'National Day for Truth and Reconciliation'
           },
           {
             cost: 500,
-            question: 'What?',
-            answer: 'This'
+            question: 'What day did the Montreal Canadiens advanced to the 2021 Stanley cup finals?',
+            answer: 'June 24th, 2021 (Saint-Jean-Baptiste)'
           }
         ]
       },
       {
-        name: 'Category 3',
+        name: 'Canada, eh',
         items: [
           {
             cost: 100,
-            question: 'What?',
-            answer: 'This'
+            question: `What animal was given official status as an emblem of Canada?`,
+            answer: 'Beaver'
           },
           {
             cost: 200,
-            question: 'What?',
-            answer: 'This'
+            question: `What is the full name of current Canada's Prime Minister?`,
+            answer: 'Justin Pierre James Trudeau'
           },
           {
             cost: 300,
-            question: 'What?',
-            answer: 'This'
+            question: 'Founded in 1497, what is the oldest city in Canada?',
+            answer: `St. John's, NL`
           },
           {
             cost: 400,
-            question: 'What?',
-            answer: 'This'
+            question: `Canada's name derived from "kanata", a word in the language of the St. Lawrence Iroquoians. What does it mean?`,
+            answer: 'Settlement or village'
           },
           {
             cost: 500,
-            question: 'What?',
-            answer: 'This'
+            question: 'In 1947, a village in Yukon called Snag set the record for the lowest temperature ever recorded in Canada. What was the temperature?',
+            answer: '-62.8° C'
           }
         ]
       },
       {
-        name: 'Category 4',
+        name: 'Movies, Music & More',
         items: [
           {
             cost: 100,
-            question: 'What?',
-            answer: 'This'
+            question: `What famous John Lennon's song was composed here in Montreal?`,
+            answer: 'Give Peace a Chance'
           },
           {
             cost: 200,
-            question: 'What?',
-            answer: 'This'
+            question: 'What is the highest grossing movie of all time?',
+            answer: 'Avatar ($2,847,246,203)'
           },
           {
             cost: 300,
-            question: 'What?',
-            answer: 'This'
+            question: 'On The Office tv show, this Seattle-born actor, who turns 56 next month, played a salesman and even directed a couple of episodes',
+            answer: 'Rainn Wilson'
           },
           {
             cost: 400,
-            question: 'What?',
-            answer: 'This'
+            question: `What's Up? by 4 Non Blondes became the Team Trip's hymn. In what year was this song released?`,
+            answer: '1993'
           },
           {
             cost: 500,
-            question: 'What?',
-            answer: 'This'
+            question: 'How many Oscars did the entire Lord of the Rings saga win?',
+            answer: '17'
           }
         ]
       },
       {
-        name: 'Category 5',
+        name: 'Random AF',
         items: [
           {
             cost: 100,
-            question: 'What?',
-            answer: 'This'
+            question: 'What is the most bike-friendly city in the world?',
+            answer: 'Copenhagen'
           },
           {
             cost: 200,
-            question: 'What?',
-            answer: 'This'
+            question: `Complete the poem:
+            I am currently broken, I have always been,
+            though my purpose is to awoken, I try to be mean,
+            at the 5th floor frozen, yours truly:`,
+            answer: 'The coffee machine'
           },
           {
             cost: 300,
-            question: 'What?',
-            answer: 'This'
+            question: 'With an average surface temperature of around 450°C, which is the hottest planet in the solar system?',
+            answer: 'Venus (yeah, I know, I thought it was Mercury too)'
           },
           {
             cost: 400,
-            question: 'What?',
-            answer: 'This'
+            question: 'Around 1 in 200 men (roughly 16 million) are direct descendants of _____',
+            answer: 'Genghis Khan'
           },
           {
             cost: 500,
-            question: 'What?',
-            answer: 'This'
+            question: 'What is the longest english word without a vowel?',
+            answer: 'Rythm'
           }
         ]
       }
@@ -210,7 +213,8 @@ export default {
   height: 100vh;
   width: 100vw;
   padding: 0 50px;
-  background: linear-gradient(45deg, #000000, #222222);
+  background: linear-gradient(45deg, #111111, #222222);
+  font-family: $regular;
 
   .scoreboard {
     color: white;
@@ -292,7 +296,7 @@ export default {
       font-weight: 900;
 
       &--title {
-        font-size: 20px;
+        font-size: 24px;
         cursor: default;
       }
 

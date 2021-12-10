@@ -3,6 +3,7 @@
     <!-- <button @click="closeOverlay">CLOSE</button> -->
     <h1 class="team">TEAM {{currentTeam}}</h1>
     <p class="cost">{{ item.cost }}</p>
+    <p class="time">{{ timeLeft }}</p>
     <div class="question">Q: {{ item.question }}</div>
     <div v-if="showAnswer" class="answer">
       <p>A: {{ item.answer }}</p>
@@ -11,7 +12,7 @@
         <button @click="addScore(item.cost)" class="right">RIGHT</button>
       </div>
     </div>
-    <button v-else @click="showAnswer = true" class="show-answer">Show Answer</button>
+    <button v-else @click="showAnswer = true" class="show-answer">Answer</button>
   </div>
 </template>
 
@@ -23,7 +24,9 @@ export default {
     item: Object
   },
   data: () => ({
-    showAnswer: false
+    showAnswer: false,
+    timeLeft: 30,
+    interval: undefined
   }),
   methods: {
     closeOverlay () {
@@ -45,6 +48,23 @@ export default {
       teams: 'teams',
       currentTeam: 'currentTeam'
     })
+  },
+  watch: {
+    showAnswer () {
+      clearInterval(this.interval)
+    }
+  },
+  mounted () {
+    this.interval = setInterval(() => {
+      if (this.timeLeft > 0) {
+        this.timeLeft--
+      } else {
+        clearInterval(this.interval)
+      }
+    }, 1000)
+  },
+  destroyed () {
+    clearInterval(this.interval)
   }
 }
 </script>
@@ -63,6 +83,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: $regular;
 
   button {
     cursor: pointer;
@@ -95,6 +116,18 @@ export default {
     background: white;
     border-radius: 5px;
     color: black;
+    padding: 0 10px;
+  }
+
+  .time {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 40px;
+    border-radius: 5px;
+    color: red;
     padding: 0 10px;
   }
 
