@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a,b,c,d){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1639146465",layout:"default",error:a,state:{overlay:{active:false,item:{}},teams:[{name:b,score:c},{name:"B",score:c}],currentTeam:b},serverRendered:true,routePath:d,config:{_app:{basePath:d,assetsPath:"\u002F_nuxt\u002F",cdnURL:a}}}}(null,"A",0,"\u002F"));
