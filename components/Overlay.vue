@@ -9,7 +9,7 @@
       <p>A: {{ item.answer }}</p>
       <div class="buttons">
         <button @click="removeScore(item.cost)" class="wrong">WRONG</button>
-        <button @click="addScore(item.cost)" class="right">RIGHT</button>
+        <button v-if="timeLeft != 0" @click="addScore(item.cost)" class="right">RIGHT</button>
       </div>
     </div>
     <button v-else @click="showAnswer = true" class="show-answer">Answer</button>
@@ -59,6 +59,7 @@ export default {
       if (this.timeLeft > 0) {
         this.timeLeft--
       } else {
+        this.showAnswer = true
         clearInterval(this.interval)
       }
     }, 1000)
